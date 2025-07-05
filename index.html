@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary ke-2 ❤️ Adna & Lyra - 8 Juli 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://em-content.zobj.net/thumbs/120/apple/354/red-heart_2764-fe0f.png">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">A&L</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#memories" class="nav-link">Timeline</a>
+                <a href="#games" class="nav-link">Fun Zone</a>
+                <a href="#guestbook" class="nav-link">Guestbook</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="color-picker-btn" id="colorPickerBtn">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Color Theme Picker -->
+    <div class="color-picker-modal" id="colorPickerModal">
+        <div class="color-picker-content">
+            <h3>Pilih Tema Warna</h3>
+            <div class="color-options">
+                <div class="color-option" data-color="#ff6b6b" style="background: #ff6b6b;"></div>
+                <div class="color-option" data-color="#4ecdc4" style="background: #4ecdc4;"></div>
+                <div class="color-option" data-color="#45b7d1" style="background: #45b7d1;"></div>
+                <div class="color-option" data-color="#f39c12" style="background: #f39c12;"></div>
+                <div class="color-option" data-color="#e74c3c" style="background: #e74c3c;"></div>
+                <div class="color-option" data-color="#9b59b6" style="background: #9b59b6;"></div>
+                <div class="color-option" data-color="#2ecc71" style="background: #2ecc71;"></div>
+                <div class="color-option" data-color="#e67e22" style="background: #e67e22;"></div>
+            </div>
+            <button class="close-color-picker" id="closeColorPicker">×</button>
+        </div>
+    </div>
+
+    <!-- Background Animations -->
+    <div class="background-animations">
+        <div class="floating-hearts"></div>
+        <div class="bokeh-lights"></div>
+        <div class="star-field"></div>
+    </div>
+
+    <!-- Virtual Pet -->
+    <div class="virtual-pet" id="virtualPet">
+        <div class="pet-container">
+            <div class="pet-character">🐱</div>
+            <div class="pet-stats">
+                <div class="pet-stat">
+                    <span>❤️</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="petLove"></div>
+                    </div>
+                </div>
+                <div class="pet-stat">
+                    <span>🍎</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="petHunger"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pet-actions">
+                <button class="pet-btn" id="feedPet">Feed</button>
+                <button class="pet-btn" id="playPet">Play</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typing-text" id="heroTitle">Anniversary ke-2</span>
+                </h1>
+                <div class="couple-names">
+                    <span class="name-adna">Adna Fika Agestifanka</span>
+                    <div class="heart-divider">❤️</div>
+                    <span class="name-lyra">Lyra Arecha</span>
+                </div>
+                <p class="hero-subtitle">
+                    <span class="typing-text" id="heroSubtitle">8 Juli 2025 - Dua Tahun Bersama dalam Cinta</span>
+                </p>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <h3>Countdown ke Anniversary</h3>
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Hari</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Jam</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Menit</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Detik</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Relationship Stats -->
+            <div class="relationship-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="daysTogether">730</div>
+                    <div class="stat-label">Hari Bersama</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="weeksTogether">104</div>
+                    <div class="stat-label">Minggu Bersama</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="monthsTogether">24</div>
+                    <div class="stat-label">Bulan Bersama</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="yearsTogether">2</div>
+                    <div class="stat-label">Tahun Bersama</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <div class="player-container">
+            <div class="player-header">
+                <h4>🎵 Playlist Kenangan</h4>
+                <button class="player-toggle" id="playerToggle">
+                    <i class="fas fa-music"></i>
+                </button>
+            </div>
+            <div class="player-content">
+                <div class="song-selector">
+                    <select id="songSelector">
+                        <option value="0">Threesixty - Sampai Nanti</option>
+                        <option value="1">Nadhif Basalamah - Penjaga Hati</option>
+                        <option value="2">Denny Caknan - Cundamani</option>
+                    </select>
+                </div>
+                <div class="player-controls">
+                    <button class="control-btn" id="playPauseBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="control-btn" id="prevBtn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button class="control-btn" id="nextBtn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                    <button class="control-btn" id="volumeBtn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar-music">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <div class="lyrics-container" id="lyricsContainer">
+                    <div class="lyrics-text" id="lyricsText"></div>
+                </div>
+            </div>
+        </div>
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Gallery Kenangan</h2>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <button class="lightbox-prev" id="lightboxPrev">‹</button>
+            <button class="lightbox-next" id="lightboxNext">›</button>
+            <img class="lightbox-image" id="lightboxImage" alt="Photo">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section id="memories" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Timeline Kenangan</h2>
+            <div class="timeline" id="timeline"></div>
+        </div>
+    </section>
+
+    <!-- Fun Zone Section -->
+    <section id="games" class="fun-zone">
+        <div class="container">
+            <h2 class="section-title">Fun Zone</h2>
+            <div class="games-grid">
+                <div class="game-card" data-game="quiz">
+                    <h3>Quiz Relationship</h3>
+                    <p>Seberapa kenal kamu dengan pasanganmu?</p>
+                    <button class="game-btn">Mulai Quiz</button>
+                </div>
+                <div class="game-card" data-game="wheel">
+                    <h3>Spin The Love Wheel</h3>
+                    <p>Putar roda untuk tantangan couple!</p>
+                    <button class="game-btn">Putar Roda</button>
+                </div>
+                <div class="game-card" data-game="memory">
+                    <h3>Tebak Kenangan</h3>
+                    <p>Mainkan game tebak foto kenangan!</p>
+                    <button class="game-btn">Main Game</button>
+                </div>
+                <div class="game-card" data-game="puzzle">
+                    <h3>Puzzle Foto</h3>
+                    <p>Susun puzzle dari foto couple!</p>
+                    <button class="game-btn">Main Puzzle</button>
+                </div>
+                <div class="game-card" data-game="ai-poem">
+                    <h3>AI Poem Generator</h3>
+                    <p>Buat puisi cinta otomatis!</p>
+                    <button class="game-btn">Buat Puisi</button>
+                </div>
+                <div class="game-card" data-game="chatbot">
+                    <h3>AI Chatbot</h3>
+                    <p>Chat dengan AI yang lucu!</p>
+                    <button class="game-btn">Start Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guestbook Section -->
+    <section id="guestbook" class="guestbook-section">
+        <div class="container">
+            <h2 class="section-title">Wall of Love</h2>
+            <div class="guestbook-form">
+                <input type="text" id="guestName" placeholder="Nama kamu">
+                <textarea id="guestMessage" placeholder="Tulis pesan untuk Adna & Lyra..."></textarea>
+                <button id="submitMessage">Kirim Pesan ❤️</button>
+            </div>
+            <div class="messages-container" id="messagesContainer"></div>
+        </div>
+    </section>
+
+    <!-- Love Letter Modal -->
+    <div class="love-letter-modal" id="loveLetterModal">
+        <div class="letter-envelope" id="letterEnvelope">
+            <div class="envelope-front">
+                <div class="envelope-seal">❤️</div>
+                <div class="envelope-address">
+                    <p>Untuk: Lyra Arecha</p>
+                    <p>Dari: Adna Fika Agestifanka</p>
+                </div>
+            </div>
+            <div class="letter-content" id="letterContent">
+                <div class="letter-header">
+                    <h3>Surat Cinta Anniversary ke-2</h3>
+                    <p class="letter-date">8 Juli 2025</p>
+                </div>
+                <div class="letter-body">
+                    <p>Sayangku, Lyra Arecha,</p>
+                    <p>Hari ini genap sudah dua tahun aku berjalan di sisimu menapaki waktu yang kita ukir bersama, menuliskan kisah indah yang tak pernah gagal membuatku jatuh cinta lagi dan lagi.</p>
+                    <p>Dua tahun ini bukan hanya sekadar hitungan hari, tapi saksi betapa kuatnya hati kita bertaut, saling menggenggam di saat senang maupun susah. Kita pernah tertawa sampai lupa waktu, menangis dalam pelukan, saling menguatkan ketika ragu datang.</p>
+                    <p>Aku bersyukur, Lyra. Bersyukur dipertemukan denganmu, yang selalu sabar menemaniku tumbuh. Kamu adalah rumah untukku pulang, pelabuhan untukku berlabuh, dan semesta penuh kehangatan yang selalu kurindukan.</p>
+                    <p>Semoga di tahun-tahun berikutnya, cinta ini tidak akan pernah surut. Aku ingin kita menua bersama, bercerita di bawah langit senja, memeluk semua mimpi yang pernah kita bisikkan berdua.</p>
+                    <p>Terima kasih sudah mencintaiku dengan caramu yang paling tulus. Terima kasih sudah mau tetap bertahan bersamaku, dengan segala kurangku.</p>
+                    <p>Selamat anniversary yang kedua, cintaku. Mari kita terus menulis cerita, satu babak indah ke babak indah berikutnya hanya ada kamu dan aku, Adna & Lyra, selamanya.</p>
+                    <p>Aku mencintaimu, sekarang, besok, dan selamanya. ❤️</p>
+                    <p class="letter-signature">Dengan cinta,<br>Adna Fika Agestifanka</p>
+                </div>
+            </div>
+        </div>
+        <button class="close-letter" id="closeLetter">×</button>
+    </div>
+
+    <!-- Game Modals -->
+    <div class="game-modal" id="quizModal">
+        <div class="modal-content">
+            <h3>Quiz Relationship</h3>
+            <div class="quiz-container" id="quizContainer"></div>
+            <button class="close-modal" data-modal="quizModal">×</button>
+        </div>
+    </div>
+
+    <div class="game-modal" id="wheelModal">
+        <div class="modal-content">
+            <h3>Spin The Love Wheel</h3>
+            <div class="wheel-container">
+                <div class="wheel" id="wheel">
+                    <div class="wheel-section" data-challenge="Berikan pelukan 10 detik">Hug</div>
+                    <div class="wheel-section" data-challenge="Cium kening pasangan">Kiss</div>
+                    <div class="wheel-section" data-challenge="Bilang 'I Love You' 5 kali">Say Love</div>
+                    <div class="wheel-section" data-challenge="Foto selfie couple">Selfie</div>
+                    <div class="wheel-section" data-challenge="Ceritakan kenangan favorit">Story</div>
+                    <div class="wheel-section" data-challenge="Nyanyi lagu romantis">Sing</div>
+                    <div class="wheel-section" data-challenge="Buat puisi dadakan">Poem</div>
+                    <div class="wheel-section" data-challenge="Dance couple 30 detik">Dance</div>
+                </div>
+                <button class="spin-btn" id="spinBtn">SPIN!</button>
+            </div>
+            <div class="wheel-result" id="wheelResult"></div>
+            <button class="close-modal" data-modal="wheelModal">×</button>
+        </div>
+    </div>
+
+    <div class="game-modal" id="aiPoemModal">
+        <div class="modal-content">
+            <h3>AI Poem Generator</h3>
+            <div class="poem-generator">
+                <input type="text" id="poemTheme" placeholder="Tema puisi (misal: cinta, rindu, bahagia)">
+                <button id="generatePoem">Generate Puisi</button>
+                <div class="poem-result" id="poemResult"></div>
+            </div>
+            <button class="close-modal" data-modal="aiPoemModal">×</button>
+        </div>
+    </div>
+
+    <div class="game-modal" id="chatbotModal">
+        <div class="modal-content">
+            <h3>AI Chatbot Couple</h3>
+            <div class="chatbot-container">
+                <div class="chat-messages" id="chatMessages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Ketik pesan...">
+                    <button id="sendChat">Send</button>
+                </div>
+            </div>
+            <button class="close-modal" data-modal="chatbotModal">×</button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab" id="mainFab">
+            <i class="fas fa-heart"></i>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <button class="fab-item" id="openLetter">
+                <i class="fas fa-envelope"></i>
+                <span>Surat Cinta</span>
+            </button>
+            <button class="fab-item" id="voiceMessage">
+                <i class="fas fa-microphone"></i>
+                <span>Voice Message</span>
+            </button>
+            <button class="fab-item" id="surpriseMe">
+                <i class="fas fa-gift"></i>
+                <span>Surprise Me</span>
+            </button>
+            <button class="fab-item" id="confetti">
+                <i class="fas fa-star"></i>
+                <span>Confetti</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Voice Message Modal -->
+    <div class="voice-modal" id="voiceModal">
+        <div class="voice-content">
+            <h3>Voice Message dari Adna</h3>
+            <div class="voice-player">
+                <button class="voice-play-btn" id="voicePlayBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="voice-wave">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </div>
+            </div>
+            <p class="voice-message-text">"Hai sayang, ini pesan khusus untukmu di anniversary kita yang ke-2. Aku sangat mencintaimu, Lyra. Terima kasih sudah menjadi bagian terbaik dalam hidupku."</p>
+            <button class="close-voice" id="closeVoice">×</button>
+        </div>
+    </div>
+
+    <!-- Achievement Modal -->
+    <div class="achievement-modal" id="achievementModal">
+        <div class="achievement-content">
+            <div class="achievement-icon">🏆</div>
+            <h3 id="achievementTitle">Achievement Unlocked!</h3>
+            <p id="achievementDesc">Kamu telah membuka fitur baru!</p>
+            <button class="close-achievement" id="closeAchievement">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Adna & Lyra</h4>
+                    <p>Dua tahun bersama, selamanya dalam cinta</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Anniversary</h4>
+                    <p>8 Juli 2025</p>
+                    <p>2 Tahun Bahagia</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Made with ❤️</h4>
+                    <p>Dibuat khusus untuk anniversary kalian</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adna & Lyra Anniversary Website. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "anniversary-website-adna-lyra",
+  "version": "1.0.0",
+  "description": "Website Anniversary ke-2 Adna & Lyra - 8 Juli 2025",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve -s . -l 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "serve -s . -l 3000"
+  },
+  "keywords": [
+    "anniversary",
+    "love",
+    "couple",
+    "website",
+    "romantic",
+    "interactive",
+    "adna",
+    "lyra"
+  ],
+  "author": "Anniversary Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/anniversary-website.git"
+  },
+  "homepage": "https://anniversary-adna-lyra.vercel.app",
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
